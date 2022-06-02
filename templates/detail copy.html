@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for m in query %}
+    <title>{{ m.inventar_number }}</title>
+    {% endfor %}
+    <link rel="stylesheet" href="{% static 'styles/detail.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            {% for m in query %}
+            <div class="navbar">
+                <h1>{{ m.inventar_number }}</h1>
+                <div class="search-container">
+                    <button class="menu-btn"><a href="{% url 'index' %}"><b>Bosh sahifa</b></a></button>
+                    <button class="admin-btn"><a href="{% url 'login' %}"><b>Admin</b></a></button>
+                    <form action="{% url 'search' %}" method="get">
+                        <input type="search" class="search" placeholder="Inventar raqami bo'yicha izlash" name="search">
+                        <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+                        <!-- <button type="submit" class="qrcode-btn"><i class="fa fa-qrcode"></i></button> -->
+                    </form>
+                </div>
+            </div>
+            <div class="left">
+                <img src="{{ m.category_id.image.url }}" alt="">
+                <div>
+                    <label for="">Mas'ul shaxs:</label>
+                    <p>{{ m.responsible_id }}</p>
+                </div>
+                <div>
+                    <label for="">Xona:</label>
+                    <p>{{ m.room_number }}</p>
+                </div>
+                <div>
+                    <label for="">Izoh:</label>
+                    <p>{{ m.description }}</p>
+                </div>
+            </div>
+            <div class="right">
+                <h1>{{ m.model_id }}</h1>
+                <div class="special-container">
+                    <div>
+                        <label for="">Seriya raqami:</label>
+                        <p>{{ m.inventar_number }}</p>
+                    </div>
+                    <div>
+                        <label for="">Protsessor:</label>
+                        <p>{{ m.processor }}</p>
+                    </div>
+                    <div>
+                        <label for="">Xotira:</label>
+                        <p>{{ m.memory }}</p>
+                    </div>
+                    <div>
+                        <label for="">Klaviatura va sichqoncha turi:</label>
+                        <p>{{m.keyword_mouse }}</p>
+                    </div>
+                    <div>
+                        <label for="">MAC Address:</label>
+                        <p>{{ m.mac_address }}</p>
+                    </div>
+                    <div>
+                        <label for="">IP Address:</label>
+                        <p>{{ m.ip_address }}</p>
+                    </div>
+                    <div>
+                        <label for="">QR Code:</label>
+                        <img src="{{ m.qr_code.url }}" alt="" style="height: 50%; width: 50%; margin-right: -30%;">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>  
+    </div>
+</body>
+</html>

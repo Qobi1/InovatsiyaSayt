@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+}
+.container{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: auto;
+}
+
+.navbar {
+    overflow: hidden;
+    background: linear-gradient(to right, #cdf071 35%, white 65%);
+}
+.navbar h1 {
+    margin-left: 30px;
+}
+.navbar button a{
+    color: #7d7d7b;
+}
+.navbar .menu-btn{
+    margin-left: -180px;
+    border: 3px solid #7d7d7b;
+    border-radius: 7px;
+    background: linear-gradient(to top, #cdf071, white);
+    color: darkslategray;
+    height: 30px;
+
+}
+.navbar .admin-btn{
+    height: 30px;
+    border: 3px solid #7d7d7b;
+    border-radius: 7px;
+    background: linear-gradient(to top, #cdf071, white);
+    color: darkslategray;
+
+}
+
+.logo {
+    position: relative;
+    height: 140px;
+    width: 140px;
+    float: right;
+    margin-right: 20px;
+    transition: transform .4s;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+/* search qismiga tegishli css kodlar */
+
+.search-container{
+    float: right;
+    margin-top: -60px;
+}
+.search-container form{
+    margin-top: -30px;
+}
+.search-container .search{
+    width: 350px;
+    text-align: center;
+    border: 3px solid #7d7d7b;
+    height: 30px;
+    border-radius: 20px;
+    background: linear-gradient(to top, #cdf071, white);
+}
+::-webkit-input-placeholder{
+    font-style: italic;
+}
+.search-container .search-btn{
+    width: 60px;
+    height: 30px;
+    border: 3px solid #7d7d7b;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #cdf071, white);
+}
+.search-container .qrcode-btn{
+    width: 35px;
+    height: 30px;
+    border: 3px solid #7d7d7b;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #cdf071, white);
+}
+
+/* product containeri */
+
+.container .product {
+    border: 3px solid #7d7d7b;
+    border-radius: 10px;
+    width: max-content;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.container .product .product-image{
+    width: 250px;
+    height: 200px;
+    /* float: left; */
+}
+.container .product h1{
+    border: 3px solid black;
+    border-radius: 40px;
+    text-align: center;
+    float: right;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 75px;
+    margin-right: 20px;
+}
+.line{
+    border-top: 5px solid #7d7d7b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Jadvalga tegishli css codes */
+table{
+    text-align: center;
+    width: 100%;
+    border-bottom: 10px solid white;
+}
+table td{
+    border: 1px solid #184175;
+    height: 40px;
+    background-color: #184175;
+    color: white;
+    font-weight: bold;
+}
+table td a{
+    text-decoration: none;
+    color: white;
+}
+table .left-circle{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+table .right-circle{
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+table .more{
+    background: linear-gradient(to bottom, #1c790e, #34ae22);
+    border: 1px solid #1c790e;
+    border-radius: 30px;
+}
+table .edit{
+    background: linear-gradient(to bottom, #1c790e, #34ae22);
+    border: 1px solid #1c790e;
+    border-radius: 30px;
+    width: 40px;
+}
+table .delete-btn{
+    background: linear-gradient(to bottom, red, crimson);
+    border-color: red;
+}
