@@ -18,6 +18,19 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
   <!-- endinject -->
+    
+    <style>
+        .ti-plus.mx-0::before {
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            border-radius: 50%;
+            background-color: #57B657;
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
+    
 </head>
 <body>
   <div class="container-scroller">
@@ -47,23 +60,25 @@
         <ul class="navbar-nav navbar-nav-right">
           {% if request.user.is_staff %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="ti-settings mx-0"></i>
-              <span class="count"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                <a class="dropdown-item preview-item" href="{% url 'category-create' %}">
+<!--            <a class="nav-link dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">-->
+<!--              <i class="ti-settings mx-0"></i>-->
+<!--              <span class="count"></span>-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">-->
+                <a class="dropdown-item preview-item" href="{% url 'category-create' %}" style="display: flex; align-items: center; padding: 10px; border-radius: 5px;">
                     <div class="preview-thumbnail">
-                    <div class="preview-icon bg-success">
-                        <i class="ti-plus mx-0"></i>                      
+                    <div class="preview-icon">
+                        <i class="ti-plus mx-0"></i>
                     </div>
                     </div>
                     <div class="preview-item-content">
-                    <h6 class="preview-subject font-weight-normal">Qo'shish</h6>
+                    <h6 class="preview-subject font-weight-normal" style="margin: 0;">Qo'shish</h6>
                     </div>
                 </a>
-            </div>
+<!--            </div>-->
           </li>
+
+
           {% endif %}
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
